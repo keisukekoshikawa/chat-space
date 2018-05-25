@@ -1,0 +1,31 @@
+.side-bar {
+  width: 300px;
+  background-color: #2f3e51;
+
+    .account {
+      background-color: #253141;
+      line-height: 100px;
+      padding: 0 20px;
+
+      h3 {
+        display: $blocks;
+        font-size: 16px;
+        font-weight: bold;
+        color: $color_white;
+      }
+
+      ul {
+        display: $blocks;
+        float: right;
+
+        li {
+          display: $blocks;
+          color: $color_white;
+          .button {
+            text-decoration: none;
+            color: $color_white;
+          }
+        }
+      }
+    }
+  }
