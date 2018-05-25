@@ -1,0 +1,27 @@
+    .groups {
+      height: calc(100vh - 100px);
+      padding: 0 20px;
+      overflow: scroll;
+
+      .group {
+        box-sizing: border-box;
+        height: 70px;
+        padding: 20px 0 40px;
+        .group-info {
+          text-decoration: none;
+
+          .group-name {
+            color: $color_white;
+            font-size: 15px;
+            margin-bottom: 5px;
+          }
+
+          .latest-message {
+            color: $color_white;
+            font-size: 11px;
+          }
+        }
+
+      }
+    }
+
