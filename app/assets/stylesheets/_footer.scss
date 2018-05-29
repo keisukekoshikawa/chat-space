@@ -9,13 +9,13 @@
 
             &--text {
               width: $max_width;
-              height: $normal_height;
+              height: $height50;
               float: left;
               position: relative;
 
               #message_text {
                 width: $max_width;
-                height: $normal_height;
+                height: $height50;
                 border: none;
                 padding: 0 10px;
               }
@@ -25,17 +25,17 @@
               float: right;
               position: absolute;
               right: 160px;
-              font-size: 20px;
+              font-size: $font_size20;
               padding-top: 10px;
             }
           }
 
           &__send-form {
             float: right;
-            height: $normal_height;
+            height: $height50;
 
             &--button {
-              height: $normal_height;
+              height: $height50;
               margin-left: 15px;
               padding: 0 30px;
               border: none;
