@@ -1,40 +1,41 @@
+//BEM修正終了
 .contents
-  .side-bar
-    .account
+  .contents__side-bar
+    .contents__side-bar--account
       %h3 sample-user
 
-      %ul.icon-list
+      %ul
         %li
-          %a.button{ href: "#" }
+          %a.button{ href: " " }
             =fa_icon("edit")
         %li
-          %a.button{ href: "#" }
+          %a.button{ href: " " }
             =fa_icon("cog")
 
-    .groups
+    .contents__side-bar__groups
       = render "groups/groups"
 
-  .chat
-    .chat__header
-      .chat__header--group
-        .chat__header--group-name
+  .contents__chat
+    .contents__chat__header
+      .contents__chat__header__group
+        .contents__chat__header__group--name
           sample-group
-        %ul.chat__header--group-members
+        %ul.contents__chat__header__group--members
           Member：
           %li.member sample-user1
           %li.member sample-user2
-      .chat__header--group-edit
-        %a.chat__header--group-edit-button{ href: "#" }
+      .contents__chat__header__group--edit
+        %a.contents__chat__header__group--edit-button{ href: "#"}
           Edit
 
-    .chat__message--show
+    .contents__chat__message
       = render "messages"
 
-    .footer
-      .footer__input--form
-        .footer__input--text
-          = text_field :message, :text, :placeholder => "type a message"
-        %label.footer__input--image
+    .contents__footer
+      .contents__footer__input-form
+        .contents__footer__input-form--text
+          = text_field :message, :text, placeholder: "type a message"
+        %a.contents__footer__input-form--image{ href: "#"}
           = fa_icon("image")
-      .footer__send--form
-        %input{:type => "submit", :value => "Send", :class => "footer__send--button"}
+      .contents__footer__send-form
+        %input{type: "submit", value: "Send", class: "contents__footer__send-form--button"}

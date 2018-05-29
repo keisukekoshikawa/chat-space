@@ -1,15 +1,15 @@
-.side-bar {
+.contents__side-bar {
   width: 300px;
   background-color: #2f3e51;
 
-    .account {
+    .contents__side-bar--account {
       background-color: #253141;
-      line-height: 100px;
+      line-height: $height100;
       padding: 0 20px;
 
       h3 {
         display: $blocks;
-        font-size: 16px;
+        font-size: $font_size16;
         font-weight: bold;
         color: $color_white;
       }
@@ -21,6 +21,7 @@
         li {
           display: $blocks;
           color: $color_white;
+
           .button {
             text-decoration: none;
             color: $color_white;
@@ -29,3 +30,4 @@
       }
     }
   }
+

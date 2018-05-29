@@ -1,18 +1,18 @@
-    .footer {
-          height: $normal_height;
+        .contents__footer {
+          @include clearfix;
           padding: 20px 40px 20px 40px;
           background-color: #DDDDDD;
-          clear: both;
-          .footer__input--form {
-            width: calc(100% - 120px);
-            line-height: $normal_height;
+
+          &__input-form {
+            width: calc(100% - 130px);
             float: left;
-            clear: both;
-            .footer__input--text {
-              height: $normal_height;
+
+            &--text {
               width: $max_width;
+              height: $normal_height;
               float: left;
               position: relative;
+
               #message_text {
                 width: $max_width;
                 height: $normal_height;
@@ -20,17 +20,21 @@
                 padding: 0 10px;
               }
             }
-            .footer__input--image {
+
+            &--image {
               float: right;
               position: absolute;
               right: 160px;
               font-size: 20px;
+              padding-top: 10px;
             }
           }
-          .footer__send--form {
+
+          &__send-form {
             float: right;
             height: $normal_height;
-            .footer__send--button {
+
+            &--button {
               height: $normal_height;
               margin-left: 15px;
               padding: 0 30px;

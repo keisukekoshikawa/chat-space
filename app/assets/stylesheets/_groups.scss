@@ -1,22 +1,23 @@
-    .groups {
+    .contents__side-bar__groups {
       height: calc(100vh - 100px);
       padding: 0 20px;
       overflow: scroll;
 
-      .group {
+      &__group {
         box-sizing: border-box;
         height: 70px;
         padding: 20px 0 40px;
-        .group-info {
+
+        &-info {
           text-decoration: none;
 
-          .group-name {
+          &--name {
             color: $color_white;
-            font-size: 15px;
+            font-size: $font_size15;
             margin-bottom: 5px;
-          }
+        }
 
-          .latest-message {
+          &--latest-message {
             color: $color_white;
             font-size: 11px;
           }
@@ -24,4 +25,6 @@
 
       }
     }
+
+
 
