@@ -1,0 +1,41 @@
+//BEM修正終了
+.contents
+  .contents__side-bar
+    .contents__side-bar--account
+      %h3 sample-user
+
+      %ul
+        %li
+          %a.button{ href: " " }
+            =fa_icon("edit")
+        %li
+          %a.button{ href: " " }
+            =fa_icon("cog")
+
+    .contents__side-bar__groups
+      = render "groups/groups"
+
+  .contents__chat
+    .contents__chat__header
+      .contents__chat__header__group
+        .contents__chat__header__group--name
+          sample-group
+        %ul.contents__chat__header__group--members
+          Member：
+          %li.member sample-user1
+          %li.member sample-user2
+      .contents__chat__header__group--edit
+        %a.contents__chat__header__group--edit-button{ href: "#"}
+          Edit
+
+    .contents__chat__message
+      = render "messages"
+
+    .contents__footer
+      .contents__footer__input-form
+        .contents__footer__input-form--text
+          = text_field :message, :text, placeholder: "type a message"
+        %a.contents__footer__input-form--image{ href: "#"}
+          = fa_icon("image")
+      .contents__footer__send-form
+        %input{type: "submit", value: "Send", class: "contents__footer__send-form--button"}

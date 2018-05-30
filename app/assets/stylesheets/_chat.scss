@@ -1,0 +1,79 @@
+.contents__chat {
+  width: calc(100vw - 300px);
+
+  &__header {
+    height: $height100;
+    border-color: $color_black;
+    padding: 0 40px 0;
+
+    &__group {
+      float: left;
+
+      &--name {
+        padding-top: 35px;
+        font-size: $font_size20;
+        margin-bottom: 15px;
+        color: $color_black;
+      }
+
+      &--members {
+        font-size: $font_size12;
+        color: $color_silver_gray;
+        display: $blocks;
+
+        .member {
+          display: $blocks;
+        }
+      }
+    }
+
+    &__group--edit {
+      float: right;
+      height: $height40;
+      margin-top: 28px;
+      display: $blocks;
+      padding: 0 20px 0;
+      border:1px solid $button_color;
+      line-height: 40px;
+
+      &-button {
+        text-decoration: none;
+        color: $button_color;
+      }
+    }
+  }
+
+
+    &__message {
+      height: calc(100vh - 190px);
+      width: $max_width;
+      background-color: $color_thin_gray;
+      padding: 0 40px 0;
+      overflow: scroll;
+
+      &__contents {
+        height: 126px;
+        padding: 46px 0 40px;
+
+        &--name {
+          font-size: $font_size16;
+          display: $blocks;
+          font-weight: bold;
+          color: $color_havy_naby;
+        }
+
+        &--timestamp {
+          font-size: $font_size12;
+          display: $blocks;
+          margin-left: 10px;
+          color: $color_silver_gray;
+        }
+
+        &--messages {
+          font-size: $font_size14;
+          color: $color_havy_naby;
+          margin-top: 10px;
+      }
+    }
+  }
+}
