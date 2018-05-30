@@ -1,46 +1,46 @@
-        .contents__footer {
-          @include clearfix;
-          padding: 20px 40px 20px 40px;
-          background-color: #DDDDDD;
+.contents__footer {
+  @include clearfix;
+  padding: 20px 40px 20px 40px;
+  background-color: #DDDDDD;
 
-          &__input-form {
-            width: calc(100% - 130px);
-            float: left;
+  &__input-form {
+  width: calc(100% - 130px);
+  float: left;
 
-            &--text {
-              width: $max_width;
-              height: $height50;
-              float: left;
-              position: relative;
+  &--text {
+    width: $max_width;
+    height: $height50;
+    float: left;
+    position: relative;
 
-              #message_text {
-                width: $max_width;
-                height: $height50;
-                border: none;
-                padding: 0 10px;
-              }
-            }
+    #message_text {
+      width: $max_width;
+      height: $height50;
+      border: none;
+      padding: 0 10px;
+    }
+  }
 
-            &--image {
-              float: right;
-              position: absolute;
-              right: 160px;
-              font-size: $font_size20;
-              padding-top: 10px;
-            }
-          }
+  &--image {
+    float: right;
+    position: absolute;
+    right: 160px;
+    font-size: $font_size20;
+    padding-top: 10px;
+  }
+}
 
-          &__send-form {
-            float: right;
-            height: $height50;
+  &__send-form {
+    float: right;
+    height: $height50;
 
-            &--button {
-              height: $height50;
-              margin-left: 15px;
-              padding: 0 30px;
-              border: none;
-              color: $color_white;
-              background-color: $button_color;
-            }
-          }
-        }
+  &--button {
+    height: $height50;
+    margin-left: 15px;
+    padding: 0 30px;
+    border: none;
+    color: $color_white;
+    background-color: $button_color;
+    }
+  }
+}
