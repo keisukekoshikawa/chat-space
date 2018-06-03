@@ -1,7 +1,8 @@
 .contents__side-bar__groups__group
-  %a.contents__side-bar__groups__group-info{ href: "#" }
-    .contents__side-bar__groups__group-info--name
-      somegroup
-    .contents__side-bar__groups__group-info--latest-message
-      sample sentence
-
+  - current_user.groups.each do |group|
+    .contents__side-bar__groups__group-info
+      = link_to group_messages_path(group) do
+        .contents__side-bar__groups__group-info--name
+          = group.name
+        .contents__side-bar__groups__group-info--latest-message
+          sample-messages
