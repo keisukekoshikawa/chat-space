@@ -1,41 +1,15 @@
 .contents
   .contents__side-bar
-    .contents__side-bar--account
-      %h3
-      = current_user.name
-
-      %ul
-        %li
-        = link_to new_group_path do
-          = fa_icon 'pencil-square-o', class: "button"
-        %li
-        = link_to edit_user_path(current_user) do
-          = fa_icon 'cog', class: "button"
+    = render "shared/side-bar"
 
     .contents__side-bar__groups
       = render "shared/groups"
 
   .contents__chat
-    .contents__chat__header
-      .contents__chat__header__group
-        .contents__chat__header__group--name
-          sample-group
-        %ul.contents__chat__header__group--members
-          Member：
-          %li.member sample-user1
-          %li.member sample-user2
-      .contents__chat__header__group--edit
-        %a.contents__chat__header__group--edit-button{ href: "#"}
-          Edit
+    = render "shared/chat-main"
 
     .contents__chat__message
       = render "shared/messages"
 
     .contents__footer
-      .contents__footer__input-form
-        .contents__footer__input-form--text
-          = text_field :message, :text, placeholder: "type a message"
-        %a.contents__footer__input-form--image{ href: "#"}
-          = fa_icon("image")
-      .contents__footer__send-form
-        %input{type: "submit", value: "Send", class: "contents__footer__send-form--button"}
+      = render "shared/footer"
