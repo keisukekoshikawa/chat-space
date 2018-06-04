@@ -1,0 +1,7 @@
+.contents__footer__input-form
+  .contents__footer__input-form--text
+    = text_field :message, :text, placeholder: "type a message"
+  %a.contents__footer__input-form--image{ href: "#"}
+    = fa_icon("image")
+.contents__footer__send-form
+  %input{type: "submit", value: "Send", class: "contents__footer__send-form--button"}
