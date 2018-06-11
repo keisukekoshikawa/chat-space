@@ -1,7 +1,10 @@
 .contents__chat__message__contents
-  .contents__chat__message__contents--name
-    sample_user
-  .contents__chat__message__contents--timestamp
-    2018/05/26 10:45:00
-  .contents__chat__message__contents--messages
-    sample_sentence
+  - @messages.each do |message|
+    .contents__chat__message__contents--name{ "data-message-id": "#{message.id}"}
+      = message.user.name
+      .contents__chat__message__contents--timestamp
+        = message.created_at.to_s
+      .contents__chat__message__contents--messages
+        = message.content
+        = image_tag message.image.url if message.image.present?
+

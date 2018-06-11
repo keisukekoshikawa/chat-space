@@ -1,7 +1,7 @@
 .contents__footer__input-form
-  .contents__footer__input-form--text
-    = text_field :message, :text, placeholder: "type a message"
-  %a.contents__footer__input-form--image{ href: "#"}
-    = fa_icon("image")
-.contents__footer__send-form
-  %input{type: "submit", value: "Send", class: "contents__footer__send-form--button"}
+  = form_for [@group, @message] do |f|
+    = f.text_field :content, class: "contents__footer__input-form--text", placeholder: "Type a message"
+    = f.label :image, class: "contents__footer__input-form--image" do
+      = fa_icon "image lg"
+      = f.file_field :image, style: "display: none;"
+    = f.submit "Send", class: "contents__footer__input-form--button"

@@ -12,35 +12,30 @@
     height: $height50;
     float: left;
     position: relative;
+    border: none;
+    padding: 0 10px;
 
-    #message_text {
-      width: $max_width;
-      height: $height50;
-      border: none;
-      padding: 0 10px;
     }
-  }
+
 
   &--image {
-    float: right;
+    float: left;
     position: absolute;
     right: 160px;
     font-size: $font_size20;
     padding: 15px 20px 0;
-  }
 }
-
-  &__send-form {
-    float: right;
-    height: $height50;
-
   &--button {
+    float: left;
     height: $height50;
-    margin-left: 15px;
+    margin-left: 30px;
     padding: 0 30px;
     border: none;
     color: $color_white;
     background-color: $button_color;
+    position: absolute;
     }
   }
 }
+
+
