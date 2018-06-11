@@ -57,7 +57,7 @@
 
         &--name {
           font-size: $font_size16;
-          display: $blocks;
+          //display: $blocks;
           font-weight: bold;
           color: $color_havy_naby;
         }
@@ -73,6 +73,7 @@
           font-size: $font_size14;
           color: $color_havy_naby;
           margin-top: 10px;
+          margin-bottom: 40px;
       }
     }
   }
