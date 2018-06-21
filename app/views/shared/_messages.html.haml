@@ -1,10 +1,9 @@
 .contents__chat__message__contents
   - @messages.each do |message|
-    .contents__chat__message__contents--name{ "data-message-id": "#{message.id}"}
+    .contents__chat__message__contents--name
       = message.user.name
       .contents__chat__message__contents--timestamp
         = simple_time(message[:created_at])
     .contents__chat__message__contents--messages
       = message.content
       = image_tag message.image.url if message.image.present?
-

@@ -5,10 +5,9 @@ $(document).on("turbolinks:load", function() {
       var img = `<img src=${message.image}>`
     }
     var html =
-               `<div class = "contents__chat__message__contents--name" data-message-id="${message.id}>
-
+               `<div class = "contents__chat__message__contents--name">
+                  ${message.name}
                     <div class = "contents__chat__message__contents--timestamp">
-                      ${message.name}
                          ${message.created_at}
 
                     </div>
@@ -40,8 +39,6 @@ $(document).on("turbolinks:load", function() {
       $('.contents__footer__input-form--text').val('')
       $("#new_message")[0].reset();
       $('.contents__chat__message').animate({ scrollTop: $('.contents__chat__message')[0].scrollHeight }, 500)
-
-
     })
     .fail(function() {
       alert('failed')
