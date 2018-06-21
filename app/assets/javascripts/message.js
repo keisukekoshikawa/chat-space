@@ -9,13 +9,11 @@ $(document).on("turbolinks:load", function() {
                   ${message.name}
                     <div class = "contents__chat__message__contents--timestamp">
                          ${message.created_at}
-
+                    </div>
                     </div>
                     <div class = "contents__chat__message__contents--messages">
                       ${message.content}
                       ${img}
-
-                  </div>
                 </div>
                `
     return html
