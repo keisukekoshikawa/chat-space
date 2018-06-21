@@ -8,14 +8,14 @@ $(document).on("turbolinks:load", function() {
                `<div class = "contents__chat__message__contents--name" data-message-id="${message.id}>
 
                     <div class = "contents__chat__message__contents--timestamp">
-                      <p>${message.name}
+                      ${message.name}
                          ${message.created_at}
-                      </p>
+
                     </div>
                     <div class = "contents__chat__message__contents--messages">
-                      <p>${message.content}
+                      ${message.content}
                       ${img}
-                      </p>
+
                   </div>
                 </div>
                `
