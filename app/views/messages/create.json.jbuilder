@@ -1,5 +1,5 @@
 json.name        @message.user.name
 json.content     @message.content
 json.image       @message.image.url
-json.created_at  simple_time(@message[:created_at])
+json.created_at  @message.created_at.to_s(:datetime)
 json.id          @message.id

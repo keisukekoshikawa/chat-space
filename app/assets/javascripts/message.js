@@ -4,14 +4,15 @@ $(document).on("turbolinks:load", function() {
     if (message.image) {
       var img = `<img src=${message.image}>`;
     }
+
     var html =
-               `<div class = "contents__chat__message__contents--name">
+               `<div class="contents__chat__message__contents--name">
                   ${message.name}
-                  <div class = "contents__chat__message__contents--timestamp">
+                  <div class="contents__chat__message__contents--timestamp">
                     ${message.created_at}
                   </div>
                 </div>
-                <div class = "contents__chat__message__contents--messages">
+                <div class="contents__chat__message__contents--messages">
                   ${message.content}
                   ${img}
                 </div>
@@ -43,9 +44,11 @@ $(document).on("turbolinks:load", function() {
       scroll();
       $(".contents__footer__input-form--button").prop("disabled", false);
     })
+
     .fail(function() {
       alert('failed');
     })
+
     return false;
 
   });
