@@ -18,6 +18,11 @@ $(document).on("turbolinks:load", function() {
                `
     return html;
   }
+
+  function scroll() {
+    $(".contents__chat__message").animate({ scrollTop: $('.contents__chat__message')[0].scrollHeight }, 500);
+  }
+
   $('#new_message').on('submit', function(e) {
     e.preventDefault();
     var formData = new FormData(this);
@@ -34,13 +39,14 @@ $(document).on("turbolinks:load", function() {
     .done(function(data) {
       var html = buildHTML(data);
       $('.contents__chat__message__contents').append(html);
-      $('.contents__chat__message').animate({ scrollTop: $('.contents__chat__message')[0].scrollHeight }, 500);
       $("#new_message")[0].reset();
+      scroll();
       $(".contents__footer__input-form--button").prop("disabled", false);
     })
     .fail(function() {
       alert('failed');
     })
     return false;
+
   });
 });
