@@ -3,8 +3,8 @@
     .contents__chat__header__group--name
       = @group.name
     %ul.contents__chat__header__group--members
-      Member:
+      Members:
       - @group.users.each do |user|
-        = user.name + " "
+        = user.name
   .contents__chat__header__group--edit
     =link_to 'Edit', edit_group_path(@group), class: 'contents__chat__header__group--edit-button'
