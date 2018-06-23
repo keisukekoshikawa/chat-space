@@ -3,7 +3,7 @@
     .contents__chat__message__contents--name
       = message.user.name
       .contents__chat__message__contents--timestamp
-        = message.created_at
+        = message.created_at.to_s(:datetime)
     .contents__chat__message__contents--messages
       = message.content
       = image_tag message.image.url if message.image.present?
