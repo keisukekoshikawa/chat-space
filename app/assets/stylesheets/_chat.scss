@@ -20,10 +20,6 @@
         font-size: $font_size12;
         color: $color_silver_gray;
         display: $blocks;
-
-        .member {
-          display: $blocks;
-        }
       }
     }
 
@@ -57,7 +53,6 @@
 
         &--name {
           font-size: $font_size16;
-          //display: $blocks;
           font-weight: bold;
           color: $color_havy_naby;
         }
