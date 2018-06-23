@@ -6,13 +6,13 @@ $(document).on("turbolinks:load", function() {
     }
 
     var html =
-               `<div class="contents__chat__message__contents--name">
+               `<div class='contents__chat__message__contents--name'>
                   ${message.name}
-                  <div class="contents__chat__message__contents--timestamp">
+                  <div class='contents__chat__message__contents--timestamp'>
                     ${message.created_at}
                   </div>
                 </div>
-                <div class="contents__chat__message__contents--messages">
+                <div class='contents__chat__message__contents--messages'>
                   ${message.content}
                   ${img}
                 </div>
@@ -21,7 +21,7 @@ $(document).on("turbolinks:load", function() {
   }
 
   function scroll() {
-    $(".contents__chat__message").animate({ scrollTop: $('.contents__chat__message')[0].scrollHeight }, 500);
+    $('.contents__chat__message').animate({ scrollTop: $('.contents__chat__message')[0].scrollHeight }, 500);
   }
 
   $('#new_message').on('submit', function(e) {
@@ -30,7 +30,7 @@ $(document).on("turbolinks:load", function() {
     var url = $(this).attr('action');
     $.ajax({
       url: url,
-      type: "POST",
+      type: 'POST',
       data: formData,
       dataType: 'json',
       processData: false,
@@ -40,9 +40,9 @@ $(document).on("turbolinks:load", function() {
     .done(function(data) {
       var html = buildHTML(data);
       $('.contents__chat__message__contents').append(html);
-      $("#new_message")[0].reset();
+      $('#new_message')[0].reset();
       scroll();
-      $(".contents__footer__input-form--button").prop("disabled", false);
+      $('.contents__footer__input-form--button').prop('disabled', false);
     })
 
     .fail(function() {
