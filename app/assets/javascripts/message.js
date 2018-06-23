@@ -36,7 +36,6 @@ $(document).on("turbolinks:load", function() {
       processData: false,
       contentType: false
     })
-
     .done(function(data) {
       var html = buildHTML(data);
       $('.contents__chat__message__contents').append(html);
@@ -44,12 +43,9 @@ $(document).on("turbolinks:load", function() {
       scroll();
       $('.contents__footer__input-form--button').prop('disabled', false);
     })
-
     .fail(function() {
       alert('failed');
     })
-
     return false;
-
   });
 });
