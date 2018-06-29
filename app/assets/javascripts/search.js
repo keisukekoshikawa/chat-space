@@ -47,7 +47,7 @@ $(function() {
           addUser(user);
           })
       } else {
-          noUser("該当するユーザーが見つかりません");
+          noUser('該当するユーザーが見つかりません');
       }
     })
     .fail(function() {
