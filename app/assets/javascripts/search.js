@@ -6,7 +6,7 @@ $(function() {
                   <p class='chat-group-user__name'>
                     ${user.name}
                   </p>
-                  <a class='user-search-add chat-group-user__btn chat-group-user__btn--add' data-user-id="${user.id}" data-user-name="${user. name}">追加
+                  <a class='user-search-add chat-group-user__btn chat-group-user__btn--add' data-user-id="${user.id}" data-user-name="${user. name}">Add
                   </a>
                 </div>
               `
@@ -17,7 +17,7 @@ $(function() {
                 <div class='chat-group-user clearfix' id='${id}'>
                   <input name='group[user_ids][]' type='hidden' value='${id}'>
                   <p class='chat-group-user__name'>${name}</p>
-                  <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</a>
+                  <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>delete</a>
                 </div>
               `
     return html
@@ -47,7 +47,7 @@ $(function() {
           addUser(user);
           })
       } else {
-          noUser('該当するユーザーが見つかりません');
+          noUser('No such user was found');
       }
     })
     .fail(function() {
