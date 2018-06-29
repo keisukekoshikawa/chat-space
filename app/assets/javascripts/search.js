@@ -25,9 +25,9 @@ $(function() {
 
   function noUser(user) {
     var html =`
-                <li>
-                  <div class='chat-group-user clearfix'>
-                </li>
+                <p>
+                  <div class='chat-group-user clearfix'>${user}</div>
+                </p>
               `
     search_list.append(html);
   }
