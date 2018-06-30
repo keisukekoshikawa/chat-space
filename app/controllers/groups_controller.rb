@@ -16,7 +16,7 @@ class GroupsController < ApplicationController
     if @group.save
       redirect_to root_path, notice: 'Successed to create groups'
     else
-      redirect_to "/groups/new", notice: "Could you please input group name?"
+      redirect_to new_group_path, notice: "Could you please input group name?"
     end
   end
 
