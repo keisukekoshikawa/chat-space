@@ -3,11 +3,8 @@ $(function() {
   function addUser(user) {
     var html =`
                 <div class='chat-group-user clearfix'>
-                  <p class='chat-group-user__name'>
-                    ${user.name}
-                  </p>
-                  <a class='user-search-add chat-group-user__btn chat-group-user__btn--add' data-user-id="${user.id}" data-user-name="${user.name}">Add
-                  </a>
+                  <p class='chat-group-user__name'>${user.name}</p>
+                  <a class='user-search-add chat-group-user__btn chat-group-user__btn--add' data-user-id="${user.id}" data-user-name="${user.name}">Add</a>
                 </div>
               `
               search_list.append(html);
@@ -25,9 +22,9 @@ $(function() {
 
   function noUser(user) {
     var html =`
-                <p>
-                  <div class='chat-group-user clearfix'>${user}</div>
-                </p>
+                <div class='chat-group-user clearfix'>
+                 <p>${user}</p>
+                </div>
               `
     search_list.append(html);
   }
