@@ -22,11 +22,11 @@
 
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
-      = f.label 'Added ChatMembers', class: "chat-group-form__label"
+      = f.label 'Added ChatMembers', class: 'chat-group-form__label'
     .chat-group-form__field--right
       #chat-group-users
         #chat-group-user.chat-group-user.clearfix
-          = f.hidden_field :user_ids, name: "group[user_ids][]", value: current_user.id
+          = f.hidden_field :user_ids, name: 'group[user_ids][]', value: current_user.id
           %p.chat-group-user__name
             = current_user.name
 
