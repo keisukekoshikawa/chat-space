@@ -1,4 +1,4 @@
-json.@messages.each do |message|
+json.messages @messages.each do |message|
   json.name        @message.user.name
   json.content     @message.content
   json.image       @message.image.url
