@@ -5,8 +5,8 @@ $(document).on("turbolinks:load", function() {
       var img = `<img src=${message.image}>`;
     }
 
-    var html =
-               `<div class='contents__chat__message__contents--name'>
+    var html =`
+                <div class='contents__chat__message__contents--name'>
                   ${message.name}
                   <div class='contents__chat__message__contents--timestamp'>
                     ${message.created_at}
@@ -16,7 +16,7 @@ $(document).on("turbolinks:load", function() {
                   ${message.content}
                   ${img}
                 </div>
-               `
+              `
     return html;
   }
 
