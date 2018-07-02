@@ -4,16 +4,16 @@ $(function() {
     var html =`
                 <div class='chat-group-user clearfix'>
                   <p class='chat-group-user__name'>${user.name}</p>
-                  <a class='user-search-add chat-group-user__btn chat-group-user__btn--add' data-user-id="${user.id}" data-user-name="${user.name}">Add</a>
+                  <a class='user-search-add chat-group-user__btn js-add-btn chat-group-user__btn--add' data-user-id="${user.id}" data-user-name="${user.name}">Add</a>
                 </div>
               `
               search_list.append(html);
   }
-  function deleteUser(id,name) {
+  function appendUser(user) {
     var html =`
-                <div class='chat-group-user clearfix' id='${id}'>
-                  <input name='group[user_ids][]' type='hidden' value='${id}'>
-                  <p class='chat-group-user__name'>${name}</p>
+                <div class='chat-group-user clearfix' id='${user.id}'>
+                  <input name='group[user_ids][]' type='hidden' value='${user.id}'>
+                  <p class='chat-group-user__name'>${user.name}</p>
                   <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>delete</a>
                 </div>
               `
@@ -30,7 +30,9 @@ $(function() {
   }
 
   $('#user-search-field').on('keyup', function() {
+    var newinput = '';
     var input = $.trim($(this).val());
+    if (newinput != input) {
     $.ajax({
       url: '/users',
       type: 'GET',
@@ -50,17 +52,16 @@ $(function() {
     .fail(function() {
       alert('failed')
     })
-  });
-
-  $('#user-search-result').on('click', '.user-search-add', function() {
-    var id = $(this).data('user-id')
-    var name = $(this).data('user-name')
-    var html = deleteUser(id,name)
+  }
+})
+  $('#user-search-result').on('click', '.js-add-btn', function() {
+    var user = { id: $(this).data('userId'), name: $(this).data('userName')}
+    var html = appendUser(user)
     $('#chat-group-users').append(html);
     $(this).parent().remove();
   });
 
-  $('#chat-group-users').on('click','.user-search-remove',function(){
+  $('#chat-group-users').on('click', '.js-remove-btn', function(){
     $(this).parent().remove();
   });
-});
+})
