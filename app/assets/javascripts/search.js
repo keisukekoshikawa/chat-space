@@ -24,7 +24,7 @@ $(document).on("turbolinks:load", function() {
     function noUser(message) {
       var html =`
                   <div class='chat-group-user clearfix'>
-                   <p>${user}</p>
+                   <p>${message}</p>
                   </div>
                 `
       search_list.append(html);
