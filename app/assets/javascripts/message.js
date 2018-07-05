@@ -25,7 +25,7 @@ $(document).on("turbolinks:load", function() {
 
   var interval = setInterval(function() {
     var message_id = $('.contents__chat__message__contents--name:last').data('messageId');
-    if (window.location.href.match(/\/groups\/\d+\/messages/)) {
+    if (location.pathname.match(/\/groups\/\d+\/messages/)) {
       $.ajax({
         url: location.href,
         data: { id: message_id },
@@ -36,7 +36,6 @@ $(document).on("turbolinks:load", function() {
           var html = buildHTML(message);
           $('.contents__chat__message__contents').append(html);
           scroll();
-          console.log("success!")
         });
       })
       .fail(function(json) {
@@ -69,5 +68,5 @@ $(document).on("turbolinks:load", function() {
       alert('failed');
     })
     return false;
-    });
   });
+});
