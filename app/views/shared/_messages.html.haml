@@ -1,6 +1,6 @@
 .contents__chat__message__contents
   - @messages.each do |message|
-    .contents__chat__message__contents--name
+    .contents__chat__message__contents--name{"data-message-id": "#{message.id}" }
       = message.user.name
       .contents__chat__message__contents--timestamp
         = message.created_at.to_s(:datetime)
