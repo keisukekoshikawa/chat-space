@@ -30,9 +30,10 @@ $(document).on("turbolinks:load", function() {
     }
 
     $('#user-search-field').on('keyup', function() {
-      var newinput = '';
       var input = $.trim($(this).val());
-      if (newinput != input) {
+      if (input == '') {
+        $("#user-search-result").empty();
+      } else {
       $.ajax({
         url: '/users',
         type: 'GET',
