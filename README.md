@@ -1,6 +1,11 @@
 # README
 # DB設計
 
+本番環境テスト用ユーザーネーム
+
+name: test_user1
+email: 11111111@gmail.com
+password: 11111111
 
 
 ## usersテーブル
