@@ -30,16 +30,18 @@ $(document).on("turbolinks:load", function() {
     }
 
     $('#user-search-field').on('keyup', function() {
+      $("#user-search-result").empty();
+      var userIds = $('input[name="group[user_ids][]"]').map(function(){
+        return $(this).val();
+      }).get();
       var input = $.trim($(this).val());
-      if (input == '') {
-        $("#user-search-result").empty();
-      } else {
-      $.ajax({
-        url: '/users',
-        type: 'GET',
-        data: { keyword: input },
-        dataType: 'json',
-      })
+      if (input.length) {
+        $.ajax({
+          url: '/users',
+          type: 'GET',
+          data: { keyword: input, user_ids: userIds },
+          dataType: 'json',
+        })
       .done(function(users) {
         $('#user-search-result').empty();
         if (users.length !== 0) {
