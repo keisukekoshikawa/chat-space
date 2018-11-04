@@ -4,8 +4,8 @@ class CreateMessages < ActiveRecord::Migration[5.0]
 
       t.string :content
       t.string :image
-      t.references :user,    null: false, foreign_key: true, index: true
-      t.references :group,   null: false, foreign_key: true, index: true
+      t.references :user,    null: false, foreign_key: true
+      t.references :group,   null: false, foreign_key: true
       t.timestamps
     end
   end

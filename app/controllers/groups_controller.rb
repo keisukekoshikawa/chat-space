@@ -21,7 +21,6 @@ class GroupsController < ApplicationController
   end
 
   def edit
-    @group = current_user.groups.find(params[:id])
   end
 
   def update
